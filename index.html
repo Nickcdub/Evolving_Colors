@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Evolving Colors</title>
+  
+    <script type="text/javascript" src="./assetmanager.js"></script>
+    <script type="text/javascript" src="./timer.js"></script>
+    <script type="text/javascript" src="./gameengine.js"></script>
+    <script type="text/javascript" src="./util.js"></script>
+    <script type="text/javascript" src="./plant.js"></script>
+    <script type="text/javascript" src="./animat.js"></script>
+    <script type="text/javascript" src="./automata.js"></script>
+    <script type="text/javascript" src="./main.js"></script>
+
+    <style>
+        /* Add custom styling for the buttons */
+        .button {
+            display: block; /* Ensures the buttons are on separate lines */
+            width: 150px; /* Adjust the width as needed */
+            height: 40px; /* Adjust the height as needed */
+            font-size: 16px; /* Adjust the font size as needed */
+            margin-top: 10px; /* Add some space between the canvas and buttons */
+        }
+
+        /* Add custom styling for the sliders */
+        .slider-container {
+            display: flex;
+            align-items: center;
+            margin-top: 10px;
+        }
+
+        .slider-label {
+            margin-right: 10px;
+            font-weight: bold;
+        }
+
+        .slider {
+            width: 150px;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="gameWorld" width="1000" height="1000" style="background: white; border: 1px solid black" tabindex="0" autofocus></canvas>
+
+    <button type="button" id="addPlant" class="button">Add Plant</button>
+    <button type="button" id="addAnimat" class="button">Add Animat</button>
+    <button type="button" id="clearGrid" class="button">Clear Grid</button>
+
+    <div class="slider-container">
+        <label for="plantVariationSlider" class="slider-label">Plant Variation:</label>
+        <input type="range" id="plantVariation" class="slider" min="2" max="62" step="1" value="32">
+    </div>
+    <div class="slider-container">
+        <label for="animalVariationSlider" class="slider-label">Animal Variation:</label>
+        <input type="range" id="animalVariation" class="slider" min="2" max="62" step="1" value="32">
+    </div>
+</body>
+</html>
