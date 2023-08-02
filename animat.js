@@ -41,7 +41,7 @@ class Animat{
     //Heavily inspired by Chris Marriott's implementation
     draw(ctx) {
 		ctx.fillStyle = hsl(this.hue,75,50);
-		ctx.strokeStyle = "dark gray";
+		ctx.strokeStyle = "white";
 		ctx.beginPath();
 		ctx.arc((this.x + 1/2)*PARAMS.cellSize, (this.y + 1/2)*PARAMS.cellSize, PARAMS.cellSize/2 - 1, 0, 2*Math.PI);
 		ctx.fill();
