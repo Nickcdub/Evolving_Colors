@@ -91,7 +91,7 @@ class Automata {
 
         for(let k = 0; k < this.animats.length; k++){
             this.animats[k].update();
-            if(Math.random() < 0.001){
+            if(Math.random() < 0.001 && this.animats[k] != null){
                 this.animats[k].energy = 0;
                 this.animats[k].remove();
             }
